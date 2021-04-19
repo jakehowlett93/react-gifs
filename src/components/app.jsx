@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import Search from './search.jsx';
+import Search from './search';
+import Gif from './gif';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class App extends Component {
@@ -8,7 +9,12 @@ class App extends Component {
     return (
       <div>
         <div className="left-scene">
-          <Search />
+          <div>
+            <Search />
+          </div>
+          <div>
+            <Gif />
+          </div>
         </div>
         <div className="right-scene"></div>
       </div>
