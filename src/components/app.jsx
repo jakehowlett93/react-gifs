@@ -12,7 +12,7 @@ class App extends Component {
           <div>
             <Search />
           </div>
-          <div>
+          <div className="selected-gif">
             <Gif />
           </div>
         </div>
