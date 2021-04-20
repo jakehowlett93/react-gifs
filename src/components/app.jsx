@@ -22,9 +22,12 @@ class App extends Component {
       result.data.forEach((gif) => {
         ids.push({ id: gif.id });
       });
-      console.log(ids);
       this.setState({ gifs: ids });
     });
+  }
+
+  select = (id) => {
+    this.setState({ selectedGif: id })
   }
 
   render() {
@@ -36,11 +39,11 @@ class App extends Component {
             <Search searchGifs={this.searchGifs} />
           </div>
           <div className="selected-gif">
-            <Gif id={selectedGif} />
+            <Gif id={selectedGif} select={this.select} />
           </div>
         </div>
         <div className="right-scene">
-          <GifList gifs={gifs} />
+          <GifList gifs={gifs} select={this.select} />
         </div>
       </div>
     );
