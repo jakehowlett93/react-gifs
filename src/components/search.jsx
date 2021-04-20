@@ -1,8 +1,13 @@
 import React from 'react';
 
-const Search = () => {
+const Search = (props) => {
+  const { searchGifs } = props;
+  const handleSearch = (event) => {
+    searchGifs(event.target.value);
+  };
+
   return (
-    <input type="text" className="form-search" />
+    <input type="text" className="form-search" onChange={handleSearch} />
   );
 };
 
